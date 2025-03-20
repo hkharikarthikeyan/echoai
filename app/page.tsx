@@ -4,7 +4,7 @@ import { ArrowRight, Award, MapPin, Recycle } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import ChatBot from "@/components/ChatBot"
+
 
 
 export default function Home() {
@@ -152,7 +152,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-<ChatBot/>
+
       {/* Impact Stats */}
       <section className="w-full py-12 md:py-24 lg:py-32">
         <div className="container px-4 md:px-6">
