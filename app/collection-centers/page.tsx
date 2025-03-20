@@ -11,7 +11,8 @@ import { Input } from "@/components/ui/input"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Badge } from "@/components/ui/badge"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import Chatbot from "@/components/ChatBot"
+import App from "@/App"
+
 
 export default function CollectionCentersPage() {
   const [searchQuery, setSearchQuery] = useState("")
@@ -271,7 +272,7 @@ export default function CollectionCentersPage() {
             ))}
           </div>
         </TabsContent>
-        <Chatbot/>
+       <App/>
       </Tabs>
 
       <div className="bg-muted rounded-lg p-6 mt-12">

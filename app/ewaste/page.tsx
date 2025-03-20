@@ -6,7 +6,8 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import Chatbot from "@/components/ChatBot"
+import App from "@/App"
+
 
 export default function EWastePage() {
   return (
@@ -502,7 +503,7 @@ export default function EWastePage() {
             </div>
           </div>
         </TabsContent>
-        <Chatbot/>
+        <App/>
       </Tabs>
     </div>
   )

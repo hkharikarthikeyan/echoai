@@ -12,6 +12,7 @@ import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+import App from "@/App"
 
 interface Order {
   _id: string;
@@ -229,6 +230,7 @@ export default function OrdersPage() {
                   </div>
                 </div>
               </CardContent>
+              <App/>
             </Card>
           ))}
         </div>

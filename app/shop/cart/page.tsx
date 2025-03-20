@@ -9,6 +9,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Separator } from "@/components/ui/separator";
 import { toast } from "@/components/ui/use-toast";
 import Chatbot from "@/components/ChatBot";
+import App from "@/App";
 
 interface CartItem {
   id: number;
@@ -159,7 +160,7 @@ export default function CartPage() {
               </CardFooter>
             </Card>
           </div>
-
+<App/>
           {/* Order Summary */}
           <div>
             <Card className="sticky top-20">

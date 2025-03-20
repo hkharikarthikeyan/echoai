@@ -14,7 +14,8 @@ import { Separator } from "@/components/ui/separator"
 import { Progress } from "@/components/ui/progress"
 import { Web3Connect } from "@/components/web3-connect"
 import { Alert, AlertDescription } from "@/components/ui/alert"
-import Chatbot from "@/components/ChatBot"
+import App from "@/App"
+
 
 export default function ProfilePage() {
   const { user } = useAuth()
@@ -202,7 +203,7 @@ export default function ProfilePage() {
             </CardContent>
           </Card>
         </div>
-        <Chatbot/>
+        <App/>
         {/* Main Content */}
         <div className="md:w-2/3 lg:w-3/4">
           <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">

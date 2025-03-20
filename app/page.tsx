@@ -4,6 +4,7 @@ import { ArrowRight, Award, MapPin, Recycle } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import App from "@/App"
 
 
 
@@ -237,6 +238,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <App/>
     </div>
   )
 }

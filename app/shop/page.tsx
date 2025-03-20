@@ -14,7 +14,8 @@ import { Label } from "@/components/ui/label"
 import { Separator } from "@/components/ui/separator"
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import Chatbot from "@/components/ChatBot"
+import App from "@/App"
+
 
 export default function ShopPage() {
   const [searchQuery, setSearchQuery] = useState("")
@@ -369,7 +370,7 @@ export default function ShopPage() {
                     <div className="flex items-center text-green-600 dark:text-green-400 font-medium">
                       <Award className="h-4 w-4 mr-1" /> {product.points} points
                     </div>
-                    <Chatbot/>
+                    <App/>
                   </CardContent>
                   <CardFooter className="p-4 pt-0 flex gap-2">
                     <Button variant="outline" className="w-full" asChild>
