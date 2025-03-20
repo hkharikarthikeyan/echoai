@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import Chatbot from "@/components/ChatBot"
 
 export default function EWastePage() {
   return (
@@ -501,12 +502,13 @@ export default function EWastePage() {
             </div>
           </div>
         </TabsContent>
+        <Chatbot/>
       </Tabs>
     </div>
   )
 }
 
-function Award(props) {
+function Award(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -526,7 +528,7 @@ function Award(props) {
   )
 }
 
-function CheckIcon(props) {
+function CheckIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}

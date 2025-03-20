@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { toast } from "@/components/ui/use-toast";
+import Chatbot from "@/components/ChatBot";
 
 interface CartItem {
   id: number;
@@ -147,6 +148,7 @@ export default function CartPage() {
                   ))}
                 </div>
               </CardContent>
+              <Chatbot/>
               <CardFooter className="flex justify-between">
                 <Button variant="outline" asChild>
                   <Link href="/shop">Continue Shopping</Link>

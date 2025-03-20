@@ -7,6 +7,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 
 
 
+
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
