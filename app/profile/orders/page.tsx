@@ -13,11 +13,48 @@ import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 
+interface Order {
+  _id: string;
+  items: { name: string; quantity: number; image?: string }[];
+  status: string;
+  createdAt: string;
+  updatedAt: string;
+  deliveryMethod: string;
+  totalPoints: number;
+}
+
+interface TruckProps extends React.SVGProps<SVGSVGElement> {
+  // You can add any additional props you want to accept here
+}
+
+function Truck(props: TruckProps) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M10 17h4V5H2v12h3" />
+      <path d="M20 17h2v-3.34a4 4 0 0 0-1.17-2.83L19 9h-5" />
+      <path d="M14 17h1" />
+      <circle cx="7.5" cy="17.5" r="2.5" />
+      <circle cx="17.5" cy="17.5" r="2.5" />
+    </svg>
+  );
+}
+
 export default function OrdersPage() {
   const { user } = useAuth()
-  const [orders, setOrders] = useState([])
+  const [orders, setOrders] = useState<Order[]>([])
   const [loading, setLoading] = useState(true)
-  const [error, setError] = useState("")
+  const [error, setError] = useState<string | null>(null)
   const [searchQuery, setSearchQuery] = useState("")
   const [activeTab, setActiveTab] = useState("all")
 
@@ -163,7 +200,7 @@ export default function OrdersPage() {
                           </>
                         ) : (
                           <>
-                            <Truck className="h-4 w-4 mr-2 text-muted-foreground" />
+                            <Truck />
                             <span>Home Delivery</span>
                           </>
                         )}
@@ -210,29 +247,6 @@ export default function OrdersPage() {
         </div>
       )}
     </div>
-  )
-}
-
-function Truck(props) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M10 17h4V5H2v12h3" />
-      <path d="M20 17h2v-3.34a4 4 0 0 0-1.17-2.83L19 9h-5" />
-      <path d="M14 17h1" />
-      <circle cx="7.5" cy="17.5" r="2.5" />
-      <circle cx="17.5" cy="17.5" r="2.5" />
-    </svg>
   )
 }
 
